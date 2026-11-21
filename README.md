@@ -57,9 +57,22 @@ segmentation_landcover/
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
 ```
+
+## Launch the Streamlit application
+
+From the project root, activate the environment and run:
+
+```powershell
+streamlit run app/streamlit_app.py
+```
+
+The application uses the checkpoint at `checkpoints/unet_best.pth` and can
+segment PNG, JPG and TIFF images. The first prediction loads the model once;
+later predictions reuse it. CPU inference works without a CUDA GPU.
 
 ## Backend Usage
 
