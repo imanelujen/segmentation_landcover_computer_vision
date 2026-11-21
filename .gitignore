@@ -1,0 +1,18 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Dataset volumineux
+data/raw/
+data/processed/
+*.tif
+*.tiff
+
+# Temporary files
+.ipynb_checkpoints/
+.DS_Store
+
+landcover_splits.zip
+segmentation_src.zip

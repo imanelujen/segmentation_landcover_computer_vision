@@ -1,0 +1,35 @@
+
+# Dataset
+dataset:
+  root_dir: "data/processed/official/splits"
+  image_size: 512
+  num_classes: 5
+
+  class_names:
+    - Background
+    - Building
+    - Woodland
+    - Water
+    - Road
+
+# DataLoader
+training:
+  batch_size: 4
+  num_workers: 2
+
+  # Entraînement
+  epochs: 30
+  learning_rate: 0.001
+  weight_decay: 0.0001
+
+  # Reproductibilité
+  seed: 42
+
+# Modèles
+models:
+  unet:
+    in_channels: 3
+    num_classes: 5
+
+  segformer:
+    num_classes: 5
